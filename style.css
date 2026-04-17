@@ -10,13 +10,13 @@ body {
 }
 
 .hero {
-  min-height: 18vh;
+  min-height: 10vh;
   background: linear-gradient(135deg, #2e7d32, #1b5e20);
   color: white;
 }
 
 .overlay {
-  padding: 24px;
+  padding: 20px 24px;
 }
 
 .topnav {
@@ -27,56 +27,25 @@ body {
   flex-wrap: wrap;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.topnav-simple {
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 18px;
   font-weight: 600;
-}
-
-.hero-content {
-  max-width: 760px;
-  padding: 16px 0 8px;
-}
-
-.hero-compact {
-  display: flex;
-  align-items: center;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn.primary {
-  background: #f9a825;
-  color: #222;
-}
-
-.btn.secondary {
-  background: white;
-  color: #1b5e20;
 }
 
 .banner-section {
   max-width: 1100px;
-  margin: 12px auto 24px;
+  margin: 16px auto 24px;
   padding: 0 24px;
 }
 
@@ -153,23 +122,16 @@ li {
     min-height: auto;
   }
 
-  .hero-content {
-    padding: 12px 0 4px;
+  .overlay {
+    padding: 16px;
   }
 
-  .topnav {
-    flex-direction: column;
-    align-items: flex-start;
+  .topnav-simple {
+    justify-content: flex-start;
   }
 
   .menu {
-    display: flex;
-    flex-wrap: wrap;
     gap: 12px;
-  }
-
-  .menu a {
-    margin-left: 0;
   }
 
   .banner-section {
