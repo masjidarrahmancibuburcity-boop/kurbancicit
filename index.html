@@ -21,6 +21,11 @@
         </nav>
     </header>
 
+    <div class="countdown-bar">
+        <span>⏳ Menuju Hari Raya Idul Adha: </span>
+        <strong id="timer">Memuat...</strong>
+    </div>
+
     <section class="banner-section">
         <div class="banner-wrapper">
             <img src="banner-kurban.png" alt="Banner Program Kurban 1447H" class="banner-image">
@@ -44,6 +49,7 @@
             <div class="card-header">
                 <span class="icon">📝</span>
                 <h2>Informasi Pendaftaran</h2>
+                <span class="badge-fomo">Kuota Terbatas!</span>
             </div>
             <div class="card-body">
                 <ul class="step-list">
@@ -73,8 +79,8 @@
                         <p>27 Mei 2026</p>
                     </div>
                     <div class="info-item">
-                        <small>Waktu & Distribusi</small>
-                        <p>08.00 WIB - Selesai</p>
+                        <small>Status Kuota</small>
+                        <p style="color: #d32f2f;">Hampir Terpenuhi</p>
                     </div>
                 </div>
             </section>
@@ -98,8 +104,8 @@
         <section id="menu-cepat" class="quick-access">
             <h2 class="section-title">Akses Cepat Layanan</h2>
             <div class="quick-links">
-                <a class="quick-card" href="https://forms.gle/TVVc1nGaq8VLeohx7" target="_blank">
-                    <span class="q-icon">✍️</span> Daftar Kurban
+                <a class="quick-card highlight-btn" href="https://forms.gle/TVVc1nGaq8VLeohx7" target="_blank">
+                    <span class="q-icon">✍️</span> Daftar Sekarang
                 </a>
                 <a class="quick-card" href="https://script.google.com/macros/s/AKfycbzYXuoIDRVWPJaxQb0EtZEPdEe8PdN-pJWKPNdm0lfUUqvm1QL5acAmtxGAZpln9N0v/exec" target="_blank">
                     <span class="q-icon">🔍</span> Cek Data
@@ -134,7 +140,6 @@
                         <span class="wa-label">💬 WhatsApp</span>
                     </div>
                 </a>
-
                 <a href="https://wa.me/628161388140" target="_blank" class="contact-link">
                     <div class="contact-box">
                         <div class="contact-text">
@@ -147,14 +152,34 @@
             </div>
             <div class="location">
                 <hr>
-                <p>📍 <strong>Lokasi:</strong> JW9P+2R3, Nagrak, Gunung Putri, Bogor Regency, Jawa Barat</p>
+                <p>📍 <strong>Lokasi:</strong> JW9P+2R3, Nagrak, Gunung Putri, Bogor</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Masjid Ar-Rahman Cibubur City. Dikembangkan dengan penuh khidmat.</p>
+        <p>&copy; 2026 Masjid Ar-Rahman Cibubur City.</p>
     </footer>
 
+    <script>
+        const targetDate = new Date("May 27, 2026 08:00:00").getTime();
+        const timerElement = document.getElementById("timer");
+
+        const updateTimer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            timerElement.innerHTML = days + " Hari " + hours + " Jam " + minutes + " Menit ";
+
+            if (distance < 0) {
+                clearInterval(updateTimer);
+                timerElement.innerHTML = "Hari Raya Telah Tiba!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
