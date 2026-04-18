@@ -14,7 +14,7 @@
             <div class="logo">Kurban <span>1447H</span></div>
             <div class="menu">
                 <a href="#info">Info</a>
-                <a href="#jadwal">Jadwal</a>
+                <a href="#transparansi">Transparansi</a>
                 <a href="#pembayaran">Bayar</a>
                 <a href="#menu-cepat">Menu</a>
             </div>
@@ -45,6 +45,28 @@
     </section>
 
     <main class="container">
+        <section id="transparansi" class="card trust-card">
+            <div class="card-header">
+                <span class="icon">💎</span>
+                <h2>Amanah & Transparan</h2>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h4>Laporan Real-Time</h4>
+                    <p>Seluruh data pendaftar dan hewan dapat dipantau langsung melalui sistem online kami.</p>
+                </div>
+                <div class="trust-item">
+                    <h4>Dokumentasi Lengkap</h4>
+                    <p>Setiap proses penyembelihan akan didokumentasikan dan statusnya diupdate secara berkala.</p>
+                </div>
+            </div>
+            <div class="gallery-mini">
+                <div class="photo-placeholder">Foto Kegiatan 1</div>
+                <div class="photo-placeholder">Foto Kegiatan 2</div>
+                <div class="photo-placeholder">Foto Kegiatan 3</div>
+            </div>
+        </section>
+
         <section id="info" class="card">
             <div class="card-header">
                 <span class="icon">📝</span>
@@ -53,12 +75,11 @@
             </div>
             <div class="card-body">
                 <ul class="step-list">
-                    <li>Isi form pendaftaran kurban secara online melalui Menu Cepat.</li>
-                    <li>Simpan kode peserta yang Anda peroleh setelah submit form.</li>
-                    <li>Lakukan pembayaran ke rekening panitia kurban sesuai paket.</li>
-                    <li>Upload bukti transfer pada form pendaftaran yang disediakan.</li>
-                    <li>Panitia akan melakukan verifikasi data dan pembayaran Anda.</li>
-                    <li>Nomor urut penyembelihan akan diumumkan setelah finalisasi.</li>
+                    <li>Isi form pendaftaran online melalui Menu Cepat.</li>
+                    <li>Simpan kode peserta setelah submit form.</li>
+                    <li>Lakukan pembayaran ke rekening resmi Masjid Ar-Rahman.</li>
+                    <li>Upload bukti transfer pada link yang disediakan.</li>
+                    <li>Panitia akan memverifikasi pembayaran Anda maksimal 1x24 jam.</li>
                 </ul>
             </div>
         </section>
@@ -75,12 +96,12 @@
                         <p>Segera Dibuka</p>
                     </div>
                     <div class="info-item">
-                        <small>Hari Penyembelihan</small>
+                        <small>Hari H (Idul Adha)</small>
                         <p>27 Mei 2026</p>
                     </div>
                     <div class="info-item">
                         <small>Status Kuota</small>
-                        <p style="color: #d32f2f;">Hampir Terpenuhi</p>
+                        <p style="color: #d32f2f; font-weight: 800;">Hampir Penuh</p>
                     </div>
                 </div>
             </section>
@@ -96,7 +117,7 @@
                         <p class="account-number">494563538</p>
                         <p class="account-holder">an. Masjid Ar-Rahman</p>
                     </div>
-                    <p class="note">*Mohon simpan dan upload bukti transfer Anda.</p>
+                    <p class="note">*Mohon upload bukti transfer untuk mempermudah verifikasi.</p>
                 </div>
             </section>
         </div>
@@ -108,7 +129,7 @@
                     <span class="q-icon">✍️</span> Daftar Sekarang
                 </a>
                 <a class="quick-card" href="https://script.google.com/macros/s/AKfycbzYXuoIDRVWPJaxQb0EtZEPdEe8PdN-pJWKPNdm0lfUUqvm1QL5acAmtxGAZpln9N0v/exec" target="_blank">
-                    <span class="q-icon">🔍</span> Cek Data
+                    <span class="q-icon">🔍</span> Cek Data Anda
                 </a>
                 <a class="quick-card" href="https://script.google.com/macros/s/AKfycbzTaM42wuBi-vO04lYxx_24lN4p0v2HRODBtU7QeR7KUbrSMCSltLLAjSpq2UfQDKij/exec" target="_blank">
                     <span class="q-icon">📋</span> List Peserta
@@ -128,7 +149,7 @@
         <section class="card">
             <div class="card-header">
                 <span class="icon">📞</span>
-                <h2>Kontak Panitia</h2>
+                <h2>Hubungi Kami</h2>
             </div>
             <div class="contact-grid">
                 <a href="https://wa.me/62817732551" target="_blank" class="contact-link">
@@ -150,35 +171,24 @@
                     </div>
                 </a>
             </div>
-            <div class="location">
-                <hr>
-                <p>📍 <strong>Lokasi:</strong> JW9P+2R3, Nagrak, Gunung Putri, Bogor</p>
-            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Masjid Ar-Rahman Cibubur City.</p>
+        <p>&copy; 2026 Masjid Ar-Rahman Cibubur City. Amanah & Profesional.</p>
     </footer>
 
     <script>
         const targetDate = new Date("May 27, 2026 08:00:00").getTime();
         const timerElement = document.getElementById("timer");
-
         const updateTimer = setInterval(() => {
             const now = new Date().getTime();
             const distance = targetDate - now;
-
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
             timerElement.innerHTML = days + " Hari " + hours + " Jam " + minutes + " Menit ";
-
-            if (distance < 0) {
-                clearInterval(updateTimer);
-                timerElement.innerHTML = "Hari Raya Telah Tiba!";
-            }
+            if (distance < 0) { clearInterval(updateTimer); timerElement.innerHTML = "Hari Raya Tiba!"; }
         }, 1000);
     </script>
 </body>
