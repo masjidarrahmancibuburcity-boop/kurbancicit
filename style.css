@@ -3,72 +3,73 @@
     --dark: #0a250d;
     --accent: #ffb300;
     --gold: #e0c068;
-    --white: #ffffff;
-    --soft-gray: #f9f9f9;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; overflow-x: hidden; }
 
 .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Hero & Nav */
+/* Hero */
 .hero-premium { position: relative; height: 50vh; background: var(--dark); }
 .hero-bg-image { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-.hero-overlay-dark { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent); }
-.topnav-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); z-index: 10; }
-.logo { color: white; font-weight: 800; font-size: 1.1rem; }
+.topnav-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 50px; z-index: 10; border: 1px solid rgba(255,255,255,0.2); }
+.logo { color: #fff; font-weight: 800; }
 .logo span { color: var(--accent); }
-.menu a { color: white; text-decoration: none; font-size: 0.75rem; margin-left: 20px; font-weight: 600; }
+.menu a { color: white; text-decoration: none; font-size: 0.8rem; margin-left: 20px; font-weight: 600; }
 .btn-cta-nav { background: var(--primary); padding: 8px 20px; border-radius: 50px; }
 
-/* Stats Section (Tengah & Emas) */
-.countdown-bar { background: var(--accent); text-align: center; padding: 10px; font-weight: 800; font-size: 0.8rem; }
+/* Stats Section (Centered) */
+.countdown-bar { background: var(--accent); text-align: center; padding: 10px; font-weight: 800; font-size: 0.85rem; }
 .stats-section { padding: 80px 0; background: var(--dark); color: white; text-align: center; border-radius: 50px 50px 0 0; margin-top: -40px; position: relative; }
-.section-title { font-size: 1.1rem; letter-spacing: 5px; color: var(--gold); margin-bottom: 60px; font-weight: 800; }
+.section-title { font-size: 1rem; letter-spacing: 4px; color: var(--gold); margin-bottom: 60px; font-weight: 800; }
 
-.stats-grid-premium { display: flex; justify-content: center; gap: 100px; margin-bottom: 70px; }
+.stats-grid-premium { display: flex; justify-content: center; gap: 100px; margin-bottom: 60px; }
 .stat-card { display: flex; flex-direction: column; align-items: center; }
-.animal-icon-premium { height: 160px; width: auto; margin-bottom: 25px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); }
+.animal-icon-premium { height: 180px; width: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); }
 .stat-number { font-size: 4rem; font-weight: 800; color: var(--gold); }
-.stat-unit { font-size: 1.2rem; color: #fff; margin-left: 8px; font-weight: 400; }
-.stat-label { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+.stat-unit { font-size: 1.2rem; color: #fff; margin-left: 8px; }
+.stat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
 
-/* Quran Verse Styling */
-.quran-wrapper { max-width: 800px; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-.arabic-script { font-size: 1.8rem; color: var(--gold); margin-bottom: 20px; line-height: 1.8; }
-.quran-translation { font-size: 0.95rem; font-style: italic; color: #bbb; line-height: 1.6; }
-.quran-ref { display: block; margin-top: 15px; font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+/* Quran Verse */
+.quran-wrapper { max-width: 800px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; }
+.arabic-script { font-size: 1.6rem; color: var(--gold); margin-bottom: 15px; }
+.quran-translation { font-size: 0.9rem; font-style: italic; color: #bbb; line-height: 1.6; }
+.quran-ref { display: block; margin-top: 10px; font-size: 0.75rem; color: var(--accent); }
 
-/* Payment Section (Proporsional) */
+/* Quick Menu Grid */
+.quick-menu-section { padding: 60px 0; background: #f9f9f9; }
+.quick-menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+.menu-card { background: white; padding: 25px 15px; border-radius: 20px; text-decoration: none; text-align: center; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+.menu-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.card-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.card-info strong { display: block; color: var(--primary); font-size: 0.95rem; }
+.card-info span { font-size: 0.75rem; color: #999; }
+
+/* Payment Section */
 .flex-payment-container { display: flex; align-items: center; gap: 60px; padding: 100px 0; }
 .payment-info-text { flex: 1.2; }
-.title-modern { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+.title-modern { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
 
 .wa-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
-.wa-card { display: flex; background: #f4f8f4; padding: 18px; border-radius: 15px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.3s ease; }
-.wa-card:hover { transform: translateX(10px); border-color: var(--primary); background: white; }
+.wa-card { display: flex; background: #f4f8f4; padding: 15px 20px; border-radius: 12px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.3s; }
+.wa-card:hover { background: white; border-color: var(--primary); transform: translateX(10px); }
 .wa-content strong { display: block; font-size: 0.9rem; color: var(--dark); }
 .wa-content span { font-size: 0.75rem; color: #888; }
 
-/* Luxury Bank Card */
-.bank-card-premium { flex: 0.8; background: white; padding: 45px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; transition: 0.4s ease; }
-.bank-card-premium:hover { transform: translateY(-15px); border-color: var(--primary); }
-.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-.bsi-logo-small { height: 32px; }
+/* Bank Card */
+.bank-card-premium { flex: 0.8; background: white; padding: 40px; border-radius: 35px; box-shadow: 0 20px 50px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.bsi-logo-small { height: 30px; }
 .label-bank { font-size: 0.65rem; font-weight: 800; color: #ccc; letter-spacing: 2px; }
-.account-num-big { font-size: 2.8rem; font-weight: 900; color: var(--dark); margin: 10px 0; letter-spacing: 1px; }
-.account-name-label { font-size: 1.05rem; color: #666; font-weight: 600; }
-.verify-badge { display: inline-block; margin-top: 30px; background: #e8f5e9; color: var(--primary); padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 0.75rem; }
+.account-num-big { font-size: 2.6rem; font-weight: 900; color: var(--dark); margin: 10px 0; }
+.account-name-label { font-size: 1rem; color: #666; font-weight: 600; }
+.verify-badge { display: inline-block; margin-top: 25px; background: #e8f5e9; color: var(--primary); padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.75rem; }
 
-/* Footer */
-.footer-simple { text-align: center; padding: 50px; color: #888; font-size: 0.8rem; }
+.footer-simple { text-align: center; padding: 40px; color: #999; font-size: 0.8rem; border-top: 1px solid #eee; }
 
-/* Responsive */
 @media (max-width: 900px) {
-    .stats-grid-premium { gap: 50px; flex-direction: column; }
-    .flex-payment-container { flex-direction: column; text-align: center; }
+    .stats-grid-premium, .flex-payment-container { flex-direction: column; }
     .wa-contact-grid { grid-template-columns: 1fr; }
-    .account-num-big { font-size: 2.2rem; }
-    .arabic-script { font-size: 1.4rem; }
+    .account-num-big { font-size: 2rem; }
 }
