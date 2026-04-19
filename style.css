@@ -28,19 +28,10 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); c
 .stats-grid { display: flex; justify-content: center; gap: 50px; }
 .stat-val { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
 
-/* Menu Sejajar & Tanpa Judul */
+/* Menu Section */
 .separator-light { border: none; border-top: 1px solid #eee; max-width: 1100px; margin: 0 auto; }
 .quick-menu-section { padding: 60px 0 80px; background: var(--soft-bg); }
-
-.quick-menu-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: nowrap; /* Memaksa sejajar di desktop */
-}
+.quick-menu-row { display: flex; justify-content: center; gap: 15px; max-width: 1200px; margin: 0 auto; padding: 0 20px; flex-wrap: nowrap; }
 
 .menu-card {
     background: white;
@@ -56,45 +47,101 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); c
     align-items: center;
     text-align: center;
     min-width: 140px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
-
-.menu-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.menu-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
 .menu-card.highlight { border: 2px solid var(--accent); background: #fffdf2; }
-
 .card-icon { font-size: 2rem; margin-bottom: 12px; }
 .card-info strong { display: block; font-size: 0.9rem; color: var(--primary); font-weight: 800; }
-.card-info span { font-size: 0.7rem; color: #888; font-weight: 600; }
+.card-info span { font-size: 0.7rem; color: #888; }
 
-/* Quote & Info */
+/* Quote */
 .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .quote-container { padding: 60px 0; text-align: center; }
-.arabic-text { font-size: 1.2rem; color: var(--primary); margin-bottom: 10px; }
-.flex-info { display: flex; gap: 40px; padding: 60px 0; align-items: center; }
-.bank-card-modern { background: white; padding: 35px; border-radius: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.06); flex: 1; border: 1px solid #f0f0f0; }
-.bank-header { font-size: 0.7rem; font-weight: 800; color: #999; letter-spacing: 1px; margin-bottom: 15px; }
-.acc-num { font-size: 2rem; font-weight: 900; color: var(--dark); margin: 5px 0; }
-.wa-btn { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.8rem; background: #e8f5e9; padding: 12px 20px; border-radius: 12px; display: inline-block; margin-top: 15px; transition: 0.2s; }
-.wa-btn:hover { background: var(--primary); color: white; }
+.arabic-text { font-size: 1.2rem; color: var(--primary); margin-bottom: 10px; font-weight: 600; }
 
-/* Footer Tengah (Pembaruan) */
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 0.85rem;
-    color: #888;
-    border-top: 1px solid #f5f5f5;
+/* Pembayaran Section (Proporsional & Hover Premium) */
+.flex-info { display: flex; gap: 50px; align-items: center; padding: 80px 0; }
+.info-text { flex: 1; }
+.title-modern { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
+
+.bank-card-premium {
+    flex: 0.9;
     background: white;
+    padding: 40px;
+    border-radius: 35px;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
 }
 
-/* Responsif HP */
+.bank-card-premium:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(27, 94, 32, 0.15);
+    border-color: var(--primary);
+}
+
+.bank-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background: var(--primary);
+}
+
+.bank-header { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+.bsi-logo { height: 32px; width: fit-content; object-fit: contain; }
+.bank-header span { font-size: 0.7rem; font-weight: 800; color: #bbb; letter-spacing: 2px; }
+
+.acc-num { font-size: 2.2rem; font-weight: 900; color: var(--dark); letter-spacing: 1px; margin: 8px 0; }
+.acc-name { font-size: 1rem; color: #555; font-weight: 600; }
+
+.badge-verify {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 0.75rem;
+    background: #e8f5e9;
+    color: var(--primary);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+/* WA Buttons */
+.contact-grid-small { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+.wa-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    background: #f9fbf9;
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid #edf2ed;
+    transition: 0.3s;
+}
+.wa-btn:hover { background: white; border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.wa-icon { font-size: 1.5rem; }
+.wa-name strong { display: block; font-size: 0.85rem; color: var(--dark); }
+.wa-name span { font-size: 0.7rem; color: #888; }
+
+/* Footer */
+footer { text-align: center; padding: 60px 20px; font-size: 0.85rem; color: #888; border-top: 1px solid #f5f5f5; }
+
+/* Responsif */
 @media (max-width: 1024px) {
-    .quick-menu-row { flex-wrap: wrap; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .quick-menu-row { display: grid; grid-template-columns: repeat(3, 1fr); flex-wrap: wrap; }
+}
+
+@media (max-width: 850px) {
+    .flex-info { flex-direction: column; text-align: center; gap: 40px; }
+    .contact-grid-small { grid-template-columns: 1fr; }
+    .wa-btn { justify-content: center; }
+    .acc-num { font-size: 1.8rem; }
 }
 
 @media (max-width: 600px) {
-    .quick-menu-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .flex-info { flex-direction: column; text-align: center; }
-    .menu-card { min-width: unset; padding: 18px 10px; }
-    .card-icon { font-size: 1.6rem; }
+    .quick-menu-row { grid-template-columns: repeat(2, 1fr); }
+    .menu-card { min-width: unset; }
 }
