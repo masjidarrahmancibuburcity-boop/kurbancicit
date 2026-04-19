@@ -4,77 +4,554 @@
     --accent: #ffb300;
     --gold: #e0c068;
     --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; overflow-x: hidden; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-/* Banner & Nav Fix */
-.hero-section { position: relative; width: 100%; height: 50vh; overflow: hidden; background: var(--dark); }
-.hero-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
-.navbar-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; display: flex; justify-content: space-between; align-items: center; padding: 12px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); z-index: 100; }
-.logo { color: #fff; font-weight: 800; }
-.logo span { color: var(--accent); }
-.nav-links a { color: #fff; text-decoration: none; font-size: 0.8rem; margin-left: 20px; font-weight: 600; }
-.btn-primary { background: var(--primary); padding: 8px 18px; border-radius: 50px; }
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #fff;
+    color: var(--text);
+    overflow-x: hidden;
+}
 
-/* Countdown Strip - Menjaga jarak banner & section */
-.countdown-strip { background: var(--accent); text-align: center; padding: 12px; font-weight: 800; font-size: 0.85rem; color: #000; position: relative; z-index: 10; }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-/* Stats Section - No Negative Margins */
-.stats-section { padding: 50px 0 30px; background: var(--dark); color: white; text-align: center; }
-.label-gold { font-size: 0.9rem; color: var(--gold); letter-spacing: 3px; margin-bottom: 40px; }
-.stats-grid { display: flex; justify-content: center; gap: 60px; margin-bottom: 40px; }
-.card-stat img { height: 120px; width: auto; margin-bottom: 10px; }
-.number { font-size: 3.5rem; font-weight: 800; color: var(--gold); line-height: 1; }
-.unit { font-size: 1.2rem; }
-.desc { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+/* Hero */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+    background: var(--dark);
+}
 
-/* Quran Verse - Compact */
-.quran-box { max-width: 800px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
-.arabic { font-size: 1.4rem; color: var(--gold); margin-bottom: 10px; }
-.translation { font-size: 0.85rem; color: #ccc; font-style: italic; }
-.ref { font-size: 0.75rem; color: var(--accent); display: block; margin-top: 8px; }
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.92;
+}
 
-/* Quick Access - Rapat & Bersih */
-.quick-access { padding: 30px 0; background: var(--bg-light); }
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.menu-item { background: #fff; padding: 18px 10px; border-radius: 15px; text-decoration: none; text-align: center; border: 1px solid #eee; transition: 0.3s ease; }
-.menu-item:hover { transform: translateY(-3px); border-color: var(--primary); }
-.icon { font-size: 1.5rem; margin-bottom: 10px; }
-.txt strong { display: block; font-size: 0.9rem; color: var(--primary); }
-.txt span { font-size: 0.7rem; color: #999; }
+.navbar-glass {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1120px, calc(100% - 32px));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 24px;
+    background: rgba(8, 25, 10, 0.42);
+    backdrop-filter: blur(10px);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+}
 
-/* Payment - No Large Gaps */
-.payment-section { padding: 40px 0; background: #fff; }
-.flex-payment { display: flex; align-items: center; gap: 50px; }
-.payment-text { flex: 1; }
-.title { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
-.payment-text p { font-size: 0.95rem; color: #555; margin-bottom: 25px; }
+.logo {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
 
-.wa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.wa-btn { background: #f1f8f1; padding: 15px; border-radius: 12px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.2s; }
-.wa-btn:hover { background: white; border-color: var(--primary); transform: translateX(5px); }
-.wa-btn strong { display: block; font-size: 0.85rem; color: var(--dark); }
-.wa-btn span { font-size: 0.75rem; color: #777; }
+.logo span {
+    color: var(--accent);
+}
 
-/* Luxury Card */
-.bank-card { flex: 0.8; background: #fff; padding: 35px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
-.bank-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-.bsi-logo { height: 28px; }
-.meta { font-size: 0.65rem; font-weight: 800; color: #ccc; letter-spacing: 2px; }
-.acc-num { font-size: 2.5rem; font-weight: 900; color: var(--dark); margin: 8px 0; }
-.acc-name { font-size: 0.95rem; color: #666; font-weight: 600; }
-.badge { display: inline-block; margin-top: 25px; background: #e8f5e9; color: var(--primary); padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.7rem; }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 
-.footer { text-align: center; padding: 30px; color: #aaa; font-size: 0.75rem; border-top: 1px solid #eee; }
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Countdown */
+.countdown-wrap {
+    position: relative;
+    z-index: 20;
+    margin-top: -24px;
+    padding: 0 20px;
+}
+
+.countdown-strip {
+    max-width: 540px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #ffb300, #ffd54f);
+    text-align: center;
+    padding: 12px 18px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    border-radius: 999px;
+    box-shadow: 0 12px 28px rgba(255, 179, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Stats */
+.stats-section {
+    padding: 28px 0 22px;
+    background: linear-gradient(180deg, #0a250d 0%, #123b17 100%);
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.label-gold {
+    font-size: 0.88rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 760px;
+    margin: 0 auto 28px;
+}
+
+.card-stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 24px;
+    padding: 24px 20px 20px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+    backdrop-filter: blur(8px);
+}
+
+.stat-icon-wrap {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.card-stat img {
+    max-height: 84px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 12px rgba(224, 192, 104, 0.12));
+}
+
+.stat-content {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.unit {
+    font-size: 1rem;
+    color: #f8e7ad;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 0.8rem;
+    color: #d1d5db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+/* Quran */
+.quran-box {
+    max-width: 820px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 22px;
+}
+
+.arabic {
+    font-size: 1.35rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+    line-height: 1.9;
+}
+
+.translation {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    font-style: italic;
+}
+
+.ref {
+    font-size: 0.78rem;
+    color: var(--accent);
+    display: block;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+/* Quick Access */
+.quick-access {
+    padding: 22px 0 10px;
+    background: var(--bg-light);
+}
+
+.section-title {
+    font-size: 1.18rem;
+    font-weight: 800;
+    margin: 0 0 16px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+}
+
+.menu-item {
+    background: #fff;
+    padding: 18px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #eceff1;
+    transition: 0.22s ease;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.04);
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 16px 30px rgba(27, 94, 32, 0.08);
+}
+
+.highlight-item {
+    border: 2px solid #ffe08a;
+    background: linear-gradient(180deg, #fffdf5 0%, #fffaf0 100%);
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.txt strong {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--primary);
+}
+
+.txt span {
+    font-size: 0.72rem;
+    color: #9099a3;
+}
+
+/* Payment / Help */
+.payment-section {
+    padding: 12px 0 34px;
+    background: #fff;
+}
+
+.flex-payment {
+    display: grid;
+    grid-template-columns: 1.03fr 0.97fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.payment-text,
+.bank-card {
+    height: 100%;
+}
+
+.payment-text {
+    min-width: 0;
+    background: linear-gradient(180deg, #fbfdfb 0%, #f5faf5 100%);
+    border: 1px solid #edf3ed;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 16px 34px rgba(0,0,0,0.04);
+}
+
+.title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 12px;
+    line-height: 1.15;
+}
+
+.payment-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.wa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.wa-btn {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    border: 1px solid #e3efe3;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+}
+
+.wa-btn:hover {
+    background: #fff;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.wa-btn strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.wa-btn span {
+    font-size: 0.76rem;
+    color: #777;
+}
+
+.bank-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 42px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.bank-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 14px;
+}
+
+.bsi-logo {
+    height: 28px;
+    width: auto;
+}
+
+.meta {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #b5b5b5;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.bank-body label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.acc-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin: 4px 0 6px;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.acc-name {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 22px;
+    background: #e8f5e9;
+    color: var(--primary);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 24px 20px 30px;
+    color: #aaa;
+    font-size: 0.78rem;
+    border-top: 1px solid #eee;
+}
 
 /* Responsive */
 @media (max-width: 900px) {
-    .flex-payment { flex-direction: column; text-align: center; }
-    .wa-grid { grid-template-columns: 1fr; }
-    .hero-section { height: 30vh; }
-    .stats-grid { flex-direction: column; gap: 30px; }
-    .acc-num { font-size: 1.8rem; }
+    .hero-section {
+        min-height: 34vh;
+    }
+
+    .navbar-glass {
+        width: calc(100% - 24px);
+        padding: 10px 14px;
+        border-radius: 22px;
+    }
+
+    .nav-links a {
+        font-size: 0.74rem;
+        padding: 7px 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 420px;
+    }
+
+    .flex-payment {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .wa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acc-num {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        min-height: 26vh;
+    }
+
+    .navbar-glass {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .countdown-wrap {
+        margin-top: -18px;
+        padding: 0 14px;
+    }
+
+    .countdown-strip {
+        font-size: 0.8rem;
+        padding: 10px 12px;
+    }
+
+    .stats-section {
+        padding: 24px 0 20px;
+    }
+
+    .label-gold {
+        margin-bottom: 18px;
+    }
+
+    .card-stat {
+        padding: 20px 16px;
+    }
+
+    .card-stat img {
+        max-height: 68px;
+    }
+
+    .number {
+        font-size: 2.4rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .title {
+        font-size: 1.55rem;
+    }
+
+    .payment-text {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .bank-card {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .acc-num {
+        font-size: 1.55rem;
+    }
+
+    .arabic {
+        font-size: 1.08rem;
+    }
+
+    .translation {
+        font-size: 0.84rem;
+    }
 }
