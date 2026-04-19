@@ -62,11 +62,42 @@
         </div>
     </section>
 
+    <section id="menu-cepat" class="quick-menu-section">
+        <div class="container-custom">
+            <div class="quick-menu-grid">
+                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="menu-card" target="_blank">
+                    <div class="card-icon">✍️</div>
+                    <div class="card-info"><strong>Daftar</strong><span>Sekarang</span></div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-info"><strong>Cek Data</strong><span>Status Anda</span></div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="card-icon">📋</div>
+                    <div class="card-info"><strong>Peserta</strong><span>List Lengkap</span></div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-info"><strong>Rekap</strong><span>Hewan</span></div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="card-icon">🔪</div>
+                    <div class="card-info"><strong>Sembelih</strong><span>Status Live</span></div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="card-icon">📦</div>
+                    <div class="card-info"><strong>Distribusi</strong><span>Info Paket</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="pembayaran" class="pembayaran-section container-custom">
         <div class="flex-payment-container">
             <div class="payment-info-text">
                 <h2 class="title-modern">Konfirmasi & Bantuan</h2>
-                <p>Setelah melakukan transfer, mohon kirim bukti pembayaran untuk verifikasi data pendaftaran Anda.</p>
+                <p>Setelah transfer, mohon kirim bukti pembayaran untuk verifikasi data pendaftaran Anda.</p>
                 
                 <div class="wa-contact-grid">
                     <a href="https://wa.me/62817732551" target="_blank" class="wa-card">
@@ -86,7 +117,7 @@
 
             <div class="bank-card-premium">
                 <div class="card-header-flex">
-                    <img src="bsi.png" alt="Logo BSI" class="bsi-logo-small">
+                    <img src="bsi.png" alt="BSI" class="bsi-logo-small">
                     <span class="label-bank">METODE PEMBAYARAN</span>
                 </div>
                 <div class="card-main-content">
@@ -106,7 +137,6 @@
     </footer>
 
     <script>
-        // Fetch Real-time Data
         fetch("https://script.google.com/macros/s/AKfycbzSv1eRhoAKpbycOyAFP7GI851SNnlfu7ZnwUmPzdVopSeuXeN7L7Bm-NSI_xhzKccqrA/exec")
         .then(res => res.json())
         .then(data => {
@@ -114,7 +144,6 @@
             document.getElementById("total-sapi").textContent = data.sapi ?? 0;
         });
 
-        // Countdown Timer
         const targetDate = new Date("May 27, 2026 08:00:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
