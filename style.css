@@ -5,71 +5,77 @@
     --gold: #e0c068;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; overflow-x: hidden; }
-
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; color: var(--dark); line-height: 1.6; }
 .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
 /* Hero */
-.hero-premium { position: relative; height: 50vh; background: var(--dark); }
-.hero-bg-image { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-.topnav-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 50px; z-index: 10; border: 1px solid rgba(255,255,255,0.2); }
+.hero-premium { position: relative; height: 45vh; background: var(--dark); }
+.hero-bg-image { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+.hero-overlay-dark { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), var(--dark)); }
+
+.topnav-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); z-index: 10; }
 .logo { color: #fff; font-weight: 800; }
 .logo span { color: var(--accent); }
 .menu a { color: white; text-decoration: none; font-size: 0.8rem; margin-left: 20px; font-weight: 600; }
 .btn-cta-nav { background: var(--primary); padding: 8px 20px; border-radius: 50px; }
 
-/* Stats Section (Centered) */
-.countdown-bar { background: var(--accent); text-align: center; padding: 10px; font-weight: 800; font-size: 0.85rem; }
-.stats-section { padding: 80px 0; background: var(--dark); color: white; text-align: center; border-radius: 50px 50px 0 0; margin-top: -40px; position: relative; }
-.section-title { font-size: 1rem; letter-spacing: 4px; color: var(--gold); margin-bottom: 60px; font-weight: 800; }
+/* Stats Section: Proporsi Rapi */
+.countdown-bar { background: var(--accent); text-align: center; padding: 12px; font-weight: 800; font-size: 0.85rem; position: relative; z-index: 6; }
+.stats-section { padding: 60px 0 40px; background: var(--dark); color: white; text-align: center; margin-top: 0; /* Menghilangkan margin negatif agar tidak nutupin banner */ }
+.section-title { font-size: 0.9rem; letter-spacing: 4px; color: var(--gold); margin-bottom: 40px; font-weight: 800; text-transform: uppercase; }
 
-.stats-grid-premium { display: flex; justify-content: center; gap: 100px; margin-bottom: 60px; }
+.stats-grid-premium { display: flex; justify-content: center; gap: 80px; margin-bottom: 40px; }
 .stat-card { display: flex; flex-direction: column; align-items: center; }
-.animal-icon-premium { height: 180px; width: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); }
-.stat-number { font-size: 4rem; font-weight: 800; color: var(--gold); }
-.stat-unit { font-size: 1.2rem; color: #fff; margin-left: 8px; }
-.stat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+.animal-icon-premium { height: 140px; width: auto; margin-bottom: 15px; }
+.stat-number { font-size: 3.5rem; font-weight: 800; color: var(--gold); line-height: 1; }
+.stat-unit { font-size: 1rem; color: #fff; margin-left: 5px; }
+.stat-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px; }
 
 /* Quran Verse */
-.quran-wrapper { max-width: 800px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; }
-.arabic-script { font-size: 1.6rem; color: var(--gold); margin-bottom: 15px; }
-.quran-translation { font-size: 0.9rem; font-style: italic; color: #bbb; line-height: 1.6; }
-.quran-ref { display: block; margin-top: 10px; font-size: 0.75rem; color: var(--accent); }
+.quran-wrapper { max-width: 800px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; }
+.arabic-script { font-size: 1.4rem; color: var(--gold); margin-bottom: 10px; }
+.quran-translation { font-size: 0.85rem; font-style: italic; color: #bbb; }
+.quran-ref { font-size: 0.7rem; color: var(--accent); display: block; margin-top: 5px; }
 
-/* Quick Menu Grid */
-.quick-menu-section { padding: 60px 0; background: #f9f9f9; }
-.quick-menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-.menu-card { background: white; padding: 25px 15px; border-radius: 20px; text-decoration: none; text-align: center; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-.menu-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-.card-icon { font-size: 1.8rem; margin-bottom: 12px; }
-.card-info strong { display: block; color: var(--primary); font-size: 0.95rem; }
-.card-info span { font-size: 0.75rem; color: #999; }
+/* Quick Menu Grid: Jarak Rapat */
+.quick-menu-section { padding: 40px 0; background: #fdfdfd; border-bottom: 1px solid #f0f0f0; }
+.quick-menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.menu-card { background: white; padding: 20px 10px; border-radius: 15px; text-decoration: none; text-align: center; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.menu-card:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.card-icon { font-size: 1.5rem; margin-bottom: 8px; }
+.card-info strong { display: block; color: var(--primary); font-size: 0.85rem; }
+.card-info span { font-size: 0.7rem; color: #999; }
 
-/* Payment Section */
-.flex-payment-container { display: flex; align-items: center; gap: 60px; padding: 100px 0; }
+/* Payment Section: Merapatkan Gap */
+.pembayaran-section { padding: 50px 0; background: #fff; }
+.flex-payment-container { display: flex; align-items: center; gap: 40px; }
 .payment-info-text { flex: 1.2; }
-.title-modern { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+.title-modern { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
+.payment-info-text p { font-size: 0.95rem; color: #555; }
 
-.wa-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
-.wa-card { display: flex; background: #f4f8f4; padding: 15px 20px; border-radius: 12px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.3s; }
-.wa-card:hover { background: white; border-color: var(--primary); transform: translateX(10px); }
-.wa-content strong { display: block; font-size: 0.9rem; color: var(--dark); }
-.wa-content span { font-size: 0.75rem; color: #888; }
+.wa-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.wa-card { display: flex; background: #f4f8f4; padding: 12px 18px; border-radius: 10px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.3s; }
+.wa-card:hover { background: white; border-color: var(--primary); transform: translateX(5px); }
+.wa-content strong { display: block; font-size: 0.85rem; color: var(--dark); }
+.wa-content span { font-size: 0.75rem; color: #666; }
 
 /* Bank Card */
-.bank-card-premium { flex: 0.8; background: white; padding: 40px; border-radius: 35px; box-shadow: 0 20px 50px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
-.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-.bsi-logo-small { height: 30px; }
-.label-bank { font-size: 0.65rem; font-weight: 800; color: #ccc; letter-spacing: 2px; }
-.account-num-big { font-size: 2.6rem; font-weight: 900; color: var(--dark); margin: 10px 0; }
-.account-name-label { font-size: 1rem; color: #666; font-weight: 600; }
-.verify-badge { display: inline-block; margin-top: 25px; background: #e8f5e9; color: var(--primary); padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.75rem; }
+.bank-card-premium { flex: 0.8; background: white; padding: 30px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 12px; }
+.bsi-logo-small { height: 25px; width: auto; }
+.label-bank { font-size: 0.6rem; font-weight: 800; color: #ccc; letter-spacing: 1px; }
+.account-num-big { font-size: 2.2rem; font-weight: 900; color: var(--dark); margin: 5px 0; letter-spacing: 0; }
+.account-name-label { font-size: 0.9rem; color: #666; font-weight: 600; }
+.verify-badge { display: inline-block; margin-top: 20px; background: #e8f5e9; color: var(--primary); padding: 5px 12px; border-radius: 50px; font-weight: 700; font-size: 0.7rem; }
 
-.footer-simple { text-align: center; padding: 40px; color: #999; font-size: 0.8rem; border-top: 1px solid #eee; }
+.footer-simple { text-align: center; padding: 30px; color: #aaa; font-size: 0.75rem; border-top: 1px solid #f5f5f5; }
 
+/* Responsive */
 @media (max-width: 900px) {
-    .stats-grid-premium, .flex-payment-container { flex-direction: column; }
+    .stats-grid-premium { gap: 40px; }
+    .flex-payment-container { flex-direction: column; text-align: center; }
     .wa-contact-grid { grid-template-columns: 1fr; }
-    .account-num-big { font-size: 2rem; }
+    .account-num-big { font-size: 1.8rem; }
+    .hero-premium { height: 35vh; }
 }
