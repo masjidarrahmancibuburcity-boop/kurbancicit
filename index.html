@@ -9,36 +9,37 @@
 </head>
 <body>
 
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <div class="logo">KURBAN<span>1447H</span></div>
-            <div class="nav-links">
-                <a href="#transparansi">Update</a>
-                <a href="#info">Pendaftaran</a>
-                <a href="https://wa.me/62817732551" class="btn-cta">Daftar Sekarang</a>
-            </div>
-        </div>
-    </nav>
+    <header class="hero-premium">
+        <img src="banner-premium.png" alt="Banner Premium Kurban Masjid Ar-Rahman" class="hero-bg-image">
+        <div class="hero-overlay-dark"></div>
 
-    <header class="hero-artistik">
-        <div class="hero-bg-text">AR-RAHMAN</div>
-        <div class="container-custom">
-            <div class="hero-content">
-                <p class="hero-sub">MASJID AR-RAHMAN CIBUBUR CITY</p>
-                <h1 class="hero-main-title">KURBAN<br><span class="text-accent">BAROKAH</span></h1>
-                <div class="hero-desc">
-                    Menebar keberkahan, menyempurnakan ibadah melalui transparansi dan amanah yang terjaga.
-                </div>
-                <div class="timer-box" id="timer">Memuat Countdown...</div>
+        <nav class="topnav-glass">
+            <div class="logo">Kurban <span>1447H</span></div>
+            <div class="menu">
+                <a href="#info">Info</a>
+                <a href="#transparansi">Update Live</a>
+                <a href="#pembayaran">Bayar</a>
+                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="btn-cta-nav" target="_blank">Daftar</a>
             </div>
-        </div>
-        <div class="floating-beasts">
-            <img src="hewan-kurban.png" alt="Hewan Kurban Premium">
+        </nav>
+
+        <div class="hero-content">
+            <div class="badge-fomo">Kuota 1447H Terbatas!</div>
+            <p class="hero-sub">Masjid Ar-Rahman Cibubur City</p>
+            <h1 class="hero-title">KURBAN<br><span class="text-accent">BAROKAH</span></h1>
+            <p class="hero-desc">Hewan kurban sehat, terawat, dan sesuai syariat untuk keberkahan ibadah Anda.</p>
+            <div class="timer-box" id="timer">Memuat Countdown...</div>
         </div>
     </header>
 
+    <div class="countdown-bar">
+        <span>⏳ Menuju Hari Raya Idul Adha: </span>
+        <strong id="timer-countdown">Memuat...</strong>
+    </div>
+
     <section id="transparansi" class="stats-section">
         <div class="container-custom">
+            <h2 class="section-title">PEROLEHAN REAL-TIME</h2>
             <div class="stats-grid">
                 <div class="stat-item">
                     <span class="stat-emoji">🐄</span>
@@ -54,37 +55,39 @@
         </div>
     </section>
 
-    <section class="verse-section">
-        <div class="container-custom">
-            <div class="verse-card">
-                <p class="arabic">لَن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَىٰ مِنكُمْ</p>
-                <p class="translation">"Daging dan darahnya tidak dapat mencapai ridha Allah, tetapi ketaqwaan kamulah yang mencapainya."</p>
-                <p class="surah">— QS. Al-Hajj: 37</p>
-            </div>
+    <section class="quote-section container-custom">
+        <div class="quote-container" style="border: none; border-top: 1px dashed var(--primary); border-bottom: 1px dashed var(--primary); background: transparent;">
+            <span class="quote-icon">"</span>
+            <p class="arabic-text">لَن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَىٰ مِنكُمْ</p>
+            <p class="quote-text">
+                "Daging dan darahnya tidak dapat mencapai ridha Allah, 
+                tetapi <strong>ketaqwaan kamulah</strong> yang mencapainya."
+            </p>
+            <span class="quote-author">— QS. Al-Hajj: 37</span>
         </div>
     </section>
 
-    <section id="info" class="pembayaran-section">
-        <div class="container-custom">
-            <div class="flex-info">
-                <div class="info-text">
-                    <h2 class="title-modern">Amanah & <br>Transparan</h2>
-                    <p>Seluruh proses pendaftaran dan distribusi dilaporkan secara real-time untuk memastikan ketenangan ibadah Anda.</p>
+    <section id="info" class="pembayaran-section container-custom">
+        <div class="flex-info">
+            <div class="info-text">
+                <h2 class="title-modern">Amanah & <br>Transparan</h2>
+                <p>Seluruh proses pendaftaran dan distribusi dilaporkan secara real-time untuk memastikan ketenangan ibadah Anda.</p>
+                <div class="quick-links">
+                    <a class="quick-card highlight-btn WA-Panitia" href="https://forms.gle/TVVc1nGaq8VLeohx7" target="_blank">✍️ Daftar Sekarang</a>
+                    <a class="quick-card" href="https://wa.me/62817732551" target="_blank">💬 WA Panitia</a>
                 </div>
-                <div class="bank-card-modern">
-                    <div class="bank-header">METODE PEMBAYARAN</div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bank_Syariah_Indonesia_logo.svg" alt="BSI" class="bsi-logo">
-                    <div class="acc-num">494563538</div>
-                    <div class="acc-name">an. Masjid Ar-Rahman Cibubur City</div>
-                </div>
+            </div>
+            <div class="bank-card-modern">
+                <div class="bank-header">METODE PEMBAYARAN</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bank_Syariah_Indonesia_logo.svg" alt="BSI" class="bsi-logo">
+                <div class="acc-num">494563538</div>
+                <div class="acc-name">an. Masjid Ar-Rahman Cibubur City</div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container-custom">
-            <p>&copy; 2026 Masjid Ar-Rahman. Crafted with ❤️ for Ummah.</p>
-        </div>
+        <p>&copy; 2026 Masjid Ar-Rahman Cibubur City. Crafted with ❤️ for Ummah.</p>
     </footer>
 
     <script>
@@ -95,7 +98,7 @@
             const distance = targetDate - now;
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("timer").innerHTML = `⏳ ${days} Hari ${hours} Jam Lagi`;
+            document.getElementById("timer-countdown").innerHTML = days + " Hari " + hours + " Jam Lagi";
         }, 1000);
         
         // Catatan: Script integrasi data perolehan hewan (Sapi/Domba) silakan ditempel di sini
