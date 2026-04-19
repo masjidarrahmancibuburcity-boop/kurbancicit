@@ -15,31 +15,43 @@
             <div class="logo">Kurban <span>1447H</span></div>
             <div class="nav-links">
                 <a href="#transparansi">Update Live</a>
+                <a href="#menu-cepat">Menu</a>
                 <a href="#pembayaran">Bayar</a>
-                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="btn-primary" target="_blank">Daftar</a>
+                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="btn-primary" target="_blank" rel="noopener noreferrer">Daftar</a>
             </div>
         </nav>
     </header>
 
-    <div class="countdown-strip">
-        <span>⌛ Menuju Hari Raya Idul Adha: <strong id="timer">Memuat...</strong></span>
+    <div class="countdown-wrap">
+        <div class="countdown-strip">
+            <span>⌛ Menuju Hari Raya Idul Adha</span>
+            <strong id="timer">Memuat...</strong>
+        </div>
     </div>
 
     <section id="transparansi" class="stats-section">
         <div class="container">
             <h2 class="label-gold">PEROLEHAN REAL-TIME</h2>
+
             <div class="stats-grid">
                 <div class="card-stat">
-                    <img src="sapi-gold.png" alt="Sapi">
+                    <div class="stat-icon-wrap">
+                        <img src="sapi-gold.png" alt="Sapi">
+                    </div>
                     <div class="stat-content">
-                        <span class="number" id="total-sapi">0</span> <span class="unit">Ekor</span>
+                        <span class="number" id="total-sapi">0</span>
+                        <span class="unit">Ekor</span>
                     </div>
                     <p class="desc">Sapi Terkumpul</p>
                 </div>
+
                 <div class="card-stat">
-                    <img src="kambing-gold.png" alt="Kambing">
+                    <div class="stat-icon-wrap">
+                        <img src="kambing-gold.png" alt="Kambing">
+                    </div>
                     <div class="stat-content">
-                        <span class="number" id="total-domba">0</span> <span class="unit">Ekor</span>
+                        <span class="number" id="total-domba">0</span>
+                        <span class="unit">Ekor</span>
                     </div>
                     <p class="desc">Domba/Kambing</p>
                 </div>
@@ -53,30 +65,31 @@
         </div>
     </section>
 
-    <section class="quick-access">
+    <section id="menu-cepat" class="quick-access">
         <div class="container">
+            <h2 class="section-title">Akses Cepat Layanan</h2>
             <div class="menu-grid">
-                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="menu-item" target="_blank">
+                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="menu-item highlight-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">✍️</div>
                     <div class="txt"><strong>Daftar</strong><span>Sekarang</span></div>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="https://script.google.com/macros/s/AKfycbzYXuoIDRVWPJaxQb0EtZEPdEe8PdN-pJWKPNdm0lfUUqvm1QL5acAmtxGAZpln9N0v/exec" class="menu-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">🔍</div>
                     <div class="txt"><strong>Cek Data</strong><span>Status Anda</span></div>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="https://script.google.com/macros/s/AKfycbzTaM42wuBi-vO04lYxx_24lN4p0v2HRODBtU7QeR7KUbrSMCSltLLAjSpq2UfQDKij/exec" class="menu-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">📋</div>
                     <div class="txt"><strong>Peserta</strong><span>List Lengkap</span></div>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="https://script.google.com/macros/s/AKfycbxiosi-4sM7mR4dun6zuUFlMinuWfk1lSV-zuC-VldVaVqop4Y66aN8WwATu2UXJ9Efdg/exec" class="menu-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">📊</div>
                     <div class="txt"><strong>Rekap</strong><span>Hewan</span></div>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="https://script.google.com/macros/s/AKfycbymtC_5eViWgqyRIN6TQkfTuf1CznmZEQBk-ECXRnY1YHjb4ZjGNjpJ346rqrHfguh1/exec" class="menu-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">🔪</div>
                     <div class="txt"><strong>Sembelih</strong><span>Status Live</span></div>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="https://script.google.com/macros/s/AKfycbymtC_5eViWgqyRIN6TQkfTuf1CznmZEQBk-ECXRnY1YHjb4ZjGNjpJ346rqrHfguh1/exec" class="menu-item" target="_blank" rel="noopener noreferrer">
                     <div class="icon">📦</div>
                     <div class="txt"><strong>Distribusi</strong><span>Info Paket</span></div>
                 </a>
@@ -90,11 +103,13 @@
                 <h2 class="title">Konfirmasi & Bantuan</h2>
                 <p>Setelah melakukan transfer, mohon kirim bukti pembayaran untuk verifikasi data pendaftaran Anda.</p>
                 <div class="wa-grid">
-                    <a href="https://wa.me/62817732551" class="wa-btn" target="_blank">
-                        <strong>Pak Wanda</strong><span>Ketua Panitia</span>
+                    <a href="https://wa.me/62817732551" class="wa-btn" target="_blank" rel="noopener noreferrer">
+                        <strong>Pak Wanda</strong>
+                        <span>Ketua Panitia</span>
                     </a>
-                    <a href="https://wa.me/628161388140" class="wa-btn" target="_blank">
-                        <strong>Pak Nanang</strong><span>Wakil Panitia</span>
+                    <a href="https://wa.me/628161388140" class="wa-btn" target="_blank" rel="noopener noreferrer">
+                        <strong>Pak Nanang</strong>
+                        <span>Wakil Panitia</span>
                     </a>
                 </div>
             </div>
@@ -121,21 +136,35 @@
     </footer>
 
     <script>
-        // API Data Fetching
-        fetch("https://script.google.com/macros/s/AKfycbzSv1eRhoAKpbycOyAFP7GI851SNnlfu7ZnwUmPzdVopSeuXeN7L7Bm-NSI_xhzKccqrA/exec")
+        fetch("https://script.google.com/macros/s/AKfycbzSv1eRhoAKpbycOyAFP7GI851SNnlfu7ZnwUmPzdVopSeuXeN7L7Bm-NSI_xhzKccqrA/exec", {
+            cache: "no-store"
+        })
         .then(res => res.json())
         .then(data => {
             document.getElementById("total-domba").textContent = data.dombaKambing ?? 0;
             document.getElementById("total-sapi").textContent = data.sapi ?? 0;
+        })
+        .catch(() => {
+            document.getElementById("total-domba").textContent = "-";
+            document.getElementById("total-sapi").textContent = "-";
         });
 
-        // Simplified Timer
         const target = new Date("May 27, 2026 08:00:00").getTime();
-        setInterval(() => {
+        const timerEl = document.getElementById("timer");
+
+        const timer = setInterval(() => {
             const now = new Date().getTime();
             const diff = target - now;
+
+            if (diff <= 0) {
+                clearInterval(timer);
+                timerEl.innerText = "Hari Raya Tiba!";
+                return;
+            }
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById("timer").innerText = days + " Hari Lagi";
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            timerEl.innerText = `${days} Hari ${hours} Jam Lagi`;
         }, 1000);
     </script>
 </body>
