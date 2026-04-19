@@ -2,68 +2,73 @@
     --primary: #1b5e20;
     --dark: #0a250d;
     --accent: #ffb300;
+    --gold: #e0c068;
     --white: #ffffff;
-    --soft-bg: #f8faf8;
+    --soft-gray: #f9f9f9;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--dark); }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
 
-/* Hero */
-.hero-premium { position: relative; width: 100%; min-height: 60vh; background: var(--dark); overflow: hidden; }
-.hero-bg-image { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-.hero-overlay-dark { position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent); z-index: 1; }
+.container-custom { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-.topnav-glass { max-width: 1100px; margin: 20px auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 25px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border-radius: 50px; z-index: 100; position: relative; border: 1px solid rgba(255,255,255,0.2); }
-.logo { color: white; font-weight: 800; }
+/* Hero & Nav */
+.hero-premium { position: relative; height: 50vh; background: var(--dark); }
+.hero-bg-image { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+.hero-overlay-dark { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent); }
+.topnav-glass { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); z-index: 10; }
+.logo { color: white; font-weight: 800; font-size: 1.1rem; }
 .logo span { color: var(--accent); }
-.menu a { color: white; text-decoration: none; font-size: 0.75rem; margin-left: 15px; font-weight: 600; }
+.menu a { color: white; text-decoration: none; font-size: 0.75rem; margin-left: 20px; font-weight: 600; }
 .btn-cta-nav { background: var(--primary); padding: 8px 20px; border-radius: 50px; }
 
-/* Stats & Countdown */
+/* Stats Section (Tengah & Emas) */
 .countdown-bar { background: var(--accent); text-align: center; padding: 10px; font-weight: 800; font-size: 0.8rem; }
-.stats-section { padding: 50px 0; background: var(--dark); color: white; border-radius: 40px 40px 0 0; margin-top: -30px; position: relative; z-index: 10; }
-.stats-grid { display: flex; justify-content: center; gap: 60px; text-align: center; }
-.stat-val { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+.stats-section { padding: 80px 0; background: var(--dark); color: white; text-align: center; border-radius: 50px 50px 0 0; margin-top: -40px; position: relative; }
+.section-title { font-size: 1.1rem; letter-spacing: 5px; color: var(--gold); margin-bottom: 60px; font-weight: 800; }
 
-/* Menu Card */
-.quick-menu-section { padding: 60px 0; background: var(--soft-bg); }
-.quick-menu-row { display: flex; gap: 15px; max-width: 1100px; margin: 0 auto; overflow-x: auto; padding-bottom: 20px; }
-.menu-card { background: white; padding: 20px; border-radius: 20px; text-decoration: none; border: 1px solid #eee; flex: 1; text-align: center; min-width: 140px; transition: 0.3s; }
-.menu-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-.card-info strong { display: block; font-size: 0.85rem; color: var(--primary); margin-top: 10px; }
+.stats-grid-premium { display: flex; justify-content: center; gap: 100px; margin-bottom: 70px; }
+.stat-card { display: flex; flex-direction: column; align-items: center; }
+.animal-icon-premium { height: 160px; width: auto; margin-bottom: 25px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); }
+.stat-number { font-size: 4rem; font-weight: 800; color: var(--gold); }
+.stat-unit { font-size: 1.2rem; color: #fff; margin-left: 8px; font-weight: 400; }
+.stat-label { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
 
-/* Pembayaran (Proporsional & Hover) */
-.flex-info { display: flex; gap: 50px; align-items: center; padding: 80px 0; max-width: 1100px; margin: 0 auto; }
-.info-text { flex: 1; }
-.bank-card-premium {
-    flex: 0.9;
-    background: white;
-    padding: 40px;
-    border-radius: 35px;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.bank-card-premium:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(27, 94, 32, 0.15); border-color: var(--primary); }
+/* Quran Verse Styling */
+.quran-wrapper { max-width: 800px; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.arabic-script { font-size: 1.8rem; color: var(--gold); margin-bottom: 20px; line-height: 1.8; }
+.quran-translation { font-size: 0.95rem; font-style: italic; color: #bbb; line-height: 1.6; }
+.quran-ref { display: block; margin-top: 15px; font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
-/* Logo Styling */
-.bsi-logo { height: 35px; width: auto; margin-bottom: 5px; }
-.bank-header span { font-size: 0.7rem; font-weight: 800; color: #bbb; letter-spacing: 2px; }
-.acc-num { font-size: 2.2rem; font-weight: 900; color: var(--dark); margin: 10px 0; }
-.badge-verify { background: #e8f5e9; color: var(--primary); padding: 6px 15px; border-radius: 50px; font-weight: 700; font-size: 0.75rem; }
+/* Payment Section (Proporsional) */
+.flex-payment-container { display: flex; align-items: center; gap: 60px; padding: 100px 0; }
+.payment-info-text { flex: 1.2; }
+.title-modern { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
 
-/* Contact Buttons */
-.contact-grid-small { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
-.wa-btn { display: flex; align-items: center; gap: 10px; text-decoration: none; background: #f9fbf9; padding: 15px; border-radius: 15px; border: 1px solid #eee; transition: 0.3s; }
-.wa-btn:hover { border-color: var(--primary); background: white; }
-.wa-name strong { display: block; font-size: 0.85rem; color: var(--dark); }
+.wa-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+.wa-card { display: flex; background: #f4f8f4; padding: 18px; border-radius: 15px; text-decoration: none; border: 1px solid #e0eee0; transition: 0.3s ease; }
+.wa-card:hover { transform: translateX(10px); border-color: var(--primary); background: white; }
+.wa-content strong { display: block; font-size: 0.9rem; color: var(--dark); }
+.wa-content span { font-size: 0.75rem; color: #888; }
+
+/* Luxury Bank Card */
+.bank-card-premium { flex: 0.8; background: white; padding: 45px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; transition: 0.4s ease; }
+.bank-card-premium:hover { transform: translateY(-15px); border-color: var(--primary); }
+.card-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.bsi-logo-small { height: 32px; }
+.label-bank { font-size: 0.65rem; font-weight: 800; color: #ccc; letter-spacing: 2px; }
+.account-num-big { font-size: 2.8rem; font-weight: 900; color: var(--dark); margin: 10px 0; letter-spacing: 1px; }
+.account-name-label { font-size: 1.05rem; color: #666; font-weight: 600; }
+.verify-badge { display: inline-block; margin-top: 30px; background: #e8f5e9; color: var(--primary); padding: 8px 18px; border-radius: 50px; font-weight: 700; font-size: 0.75rem; }
 
 /* Footer */
-footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
+.footer-simple { text-align: center; padding: 50px; color: #888; font-size: 0.8rem; }
 
-@media (max-width: 850px) {
-    .flex-info { flex-direction: column; text-align: center; }
-    .contact-grid-small { grid-template-columns: 1fr; }
-    .stats-grid { gap: 30px; }
+/* Responsive */
+@media (max-width: 900px) {
+    .stats-grid-premium { gap: 50px; flex-direction: column; }
+    .flex-payment-container { flex-direction: column; text-align: center; }
+    .wa-contact-grid { grid-template-columns: 1fr; }
+    .account-num-big { font-size: 2.2rem; }
+    .arabic-script { font-size: 1.4rem; }
 }
