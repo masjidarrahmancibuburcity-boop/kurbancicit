@@ -10,9 +10,8 @@
 <body>
 
     <header class="hero-premium">
-        <img src="banner-kurban.png" alt="Banner Kurban Premium" class="hero-bg-image">
+        <img src="banner-kurban.png" alt="Banner Kurban" class="hero-bg-image">
         <div class="hero-overlay-dark"></div>
-
         <nav class="topnav-glass">
             <div class="logo">Kurban <span>1447H</span></div>
             <div class="menu">
@@ -32,122 +31,97 @@
     <section id="transparansi" class="stats-section">
         <div class="container-custom">
             <h2 class="section-title">PEROLEHAN REAL-TIME</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-emoji">🐄</span>
-                    <div class="stat-val"><span id="total-sapi">0</span> <small>Ekor</small></div>
-                    <p>Sapi Terkumpul</p>
+            
+            <div class="stats-grid-premium">
+                <div class="stat-card">
+                    <img src="sapi-gold.png" alt="Sapi Gold" class="animal-icon-premium">
+                    <div class="stat-info">
+                        <span class="stat-number" id="total-sapi">0</span>
+                        <span class="stat-unit">Ekor</span>
+                    </div>
+                    <p class="stat-label">Sapi Terkumpul</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-emoji">🐐</span>
-                    <div class="stat-val"><span id="total-domba">0</span> <small>Ekor</small></div>
-                    <p>Domba/Kambing</p>
+
+                <div class="stat-card">
+                    <img src="kambing-gold.png" alt="Kambing Gold" class="animal-icon-premium">
+                    <div class="stat-info">
+                        <span class="stat-number" id="total-domba">0</span>
+                        <span class="stat-unit">Ekor</span>
+                    </div>
+                    <p class="stat-label">Domba/Kambing</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="quote-section container-custom">
-        <div class="quote-container">
-            <span class="quote-icon">"</span>
-            <p class="arabic-text">لَن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَىٰ مِنكُمْ</p>
-            <p class="quote-text">
-                "Daging dan darahnya tidak dapat mencapai ridha Allah, tetapi ketaqwaan kamulah yang mencapainya."
-            </p>
-            <span class="quote-author">— QS. Al-Hajj: 37</span>
-        </div>
-    </section>
-
-    <hr class="separator-light">
-
-    <section id="menu-cepat" class="quick-menu-section">
-        <div class="container-custom">
-            <div class="quick-menu-row">
-                <a href="https://forms.gle/TVVc1nGaq8VLeohx7" class="menu-card highlight" target="_blank">
-                    <div class="card-icon">✍️</div>
-                    <div class="card-info">
-                        <strong>Daftar</strong>
-                        <span>Sekarang</span>
-                    </div>
-                </a>
-                <a href="https://script.google.com/macros/s/AKfycbzYXuoIDRVWPJaxQb0EtZEPdEe8PdN-pJWKPNdm0lfUUqvm1QL5acAmtxGAZpln9N0v/exec" class="menu-card" target="_blank">
-                    <div class="card-icon">🔍</div>
-                    <div class="card-info"><strong>Cek Data</strong><span>Status Anda</span></div>
-                </a>
-                <a href="https://script.google.com/macros/s/AKfycbzTaM42wuBi-vO04lYxx_24lN4p0v2HRODBtU7QeR7KUbrSMCSltLLAjSpq2UfQDKij/exec" class="menu-card" target="_blank">
-                    <div class="card-icon">📋</div>
-                    <div class="card-info"><strong>Peserta</strong><span>List Lengkap</span></div>
-                </a>
-                <a href="https://script.google.com/macros/s/AKfycbxiosi-4sM7mR4dun6zuUFlMinuWfk1lSV-zuC-VldVaVqop4Y66aN8WwATu2UXJ9Efdg/exec" class="menu-card" target="_blank">
-                    <div class="card-icon">📊</div>
-                    <div class="card-info"><strong>Rekap</strong><span>Hewan</span></div>
-                </a>
-                <a href="https://script.google.com/macros/s/AKfycbymtC_5eViWgqyRIN6TQkfTuf1CznmZEQBk-ECXRnY1YHjb4ZjGNjpJ346rqrHfguh1/exec" class="menu-card" target="_blank">
-                    <div class="card-icon">🔪</div>
-                    <div class="card-info"><strong>Sembelih</strong><span>Status Live</span></div>
-                </a>
-                <a href="https://script.google.com/macros/s/AKfycbymtC_5eViWgqyRIN6TQkfTuf1CznmZEQBk-ECXRnY1YHjb4ZjGNjpJ346rqrHfguh1/exec" class="menu-card" target="_blank">
-                    <div class="card-icon">📦</div>
-                    <div class="card-info"><strong>Distribusi</strong><span>Info Paket</span></div>
-                </a>
+            
+            <div class="quran-wrapper">
+                <p class="arabic-script">لَن يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَىٰ مِنكُمْ</p>
+                <p class="quran-translation">
+                    "Daging dan darahnya tidak dapat mencapai ridha Allah, tetapi ketaqwaan kamulah yang mencapainya."
+                </p>
+                <span class="quran-ref">— QS. Al-Hajj: 37</span>
             </div>
         </div>
     </section>
 
     <section id="pembayaran" class="pembayaran-section container-custom">
-        <div class="flex-info">
-            <div class="info-text">
+        <div class="flex-payment-container">
+            <div class="payment-info-text">
                 <h2 class="title-modern">Konfirmasi & Bantuan</h2>
-                <p>Setelah transfer, mohon kirim bukti pembayaran ke panitia untuk verifikasi data.</p>
-                <div class="contact-grid-small">
-                    <a href="https://wa.me/62817732551" target="_blank" class="wa-btn">
-                        <span class="wa-icon">💬</span>
-                        <div class="wa-name"><strong>Pak Wanda</strong><span>Ketua Panitia</span></div>
+                <p>Setelah melakukan transfer, mohon kirim bukti pembayaran untuk verifikasi data pendaftaran Anda.</p>
+                
+                <div class="wa-contact-grid">
+                    <a href="https://wa.me/62817732551" target="_blank" class="wa-card">
+                        <div class="wa-content">
+                            <strong>Pak Wanda</strong>
+                            <span>Ketua Panitia</span>
+                        </div>
                     </a>
-                    <a href="https://wa.me/628161388140" target="_blank" class="wa-btn">
-                        <span class="wa-icon">💬</span>
-                        <div class="wa-name"><strong>Pak Nanang</strong><span>Wakil Panitia</span></div>
+                    <a href="https://wa.me/628161388140" target="_blank" class="wa-card">
+                        <div class="wa-content">
+                            <strong>Pak Nanang</strong>
+                            <span>Wakil Panitia</span>
+                        </div>
                     </a>
                 </div>
             </div>
 
             <div class="bank-card-premium">
-                <div class="bank-header">
-                    <img src="bsi.png" alt="Logo BSI" class="bsi-logo">
-                    <span>METODE PEMBAYARAN</span>
+                <div class="card-header-flex">
+                    <img src="bsi.png" alt="Logo BSI" class="bsi-logo-small">
+                    <span class="label-bank">METODE PEMBAYARAN</span>
                 </div>
-                <div class="card-body-bank">
+                <div class="card-main-content">
                     <small>Nomor Rekening:</small>
-                    <div class="acc-num">494563538</div>
-                    <div class="acc-name">an. Masjid Ar-Rahman Cibubur City</div>
+                    <div class="account-num-big">494563538</div>
+                    <div class="account-name-label">an. Masjid Ar-Rahman Cibubur City</div>
                 </div>
-                <div class="card-footer-bank">
-                    <span class="badge-verify">✓ Rekening Resmi Terverifikasi</span>
+                <div class="card-footer-flex">
+                    <span class="verify-badge">✓ Rekening Resmi Terverifikasi</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer-simple">
         <p>&copy; 2026 Masjid Ar-Rahman Cibubur City. Crafted with ❤️ for Ummah.</p>
     </footer>
 
     <script>
-        const targetDate = new Date("May 27, 2026 08:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("timer").innerHTML = days + " Hari " + hours + " Jam Lagi";
-        }, 1000);
-        
+        // Fetch Real-time Data
         fetch("https://script.google.com/macros/s/AKfycbzSv1eRhoAKpbycOyAFP7GI851SNnlfu7ZnwUmPzdVopSeuXeN7L7Bm-NSI_xhzKccqrA/exec")
         .then(res => res.json())
         .then(data => {
             document.getElementById("total-domba").textContent = data.dombaKambing ?? 0;
             document.getElementById("total-sapi").textContent = data.sapi ?? 0;
         });
+
+        // Countdown Timer
+        const targetDate = new Date("May 27, 2026 08:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("timer").innerHTML = days + " Hari Lagi";
+        }, 1000);
     </script>
 </body>
 </html>
