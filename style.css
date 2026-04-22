@@ -196,14 +196,14 @@ body {
     top: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, rgba(224, 192, 104, 0.1), rgba(255, 179, 0, 0.95), rgba(224, 192, 104, 0.1));
+    background: linear-gradient(90deg, rgba(224, 192, 104, 0.08), rgba(255, 179, 0, 0.95), rgba(224, 192, 104, 0.08));
     opacity: 0;
     transition: opacity 0.28s ease;
 }
 
 .price-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(224, 192, 104, 0.7);
+    border-color: rgba(224, 192, 104, 0.72);
     box-shadow: 0 22px 40px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(224, 192, 104, 0.12);
 }
 
@@ -279,11 +279,9 @@ body {
 }
 
 .price-subhead {
-    min-height: 0;
     font-size: 0.9rem;
     font-weight: 700;
     color: #475569;
-    margin-bottom: 0;
     line-height: 1.45;
 }
 
@@ -370,28 +368,36 @@ body {
     background: linear-gradient(135deg, #0f6b2a, #1b5e20);
     color: #fff;
     border-radius: 18px;
-    padding: 18px 20px;
+    padding: 20px 22px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    justify-content: center;
+    gap: 8px;
     box-shadow: 0 10px 24px rgba(27, 94, 32, 0.2);
 }
 
-.note-bank {
-    font-size: 0.95rem;
-    font-weight: 800;
-    letter-spacing: 1px;
+.note-bsi-logo {
+    width: 72px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 4px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px 8px;
 }
 
 .note-rek {
     font-size: 2rem;
     font-weight: 800;
     line-height: 1.1;
+    letter-spacing: 0.5px;
 }
 
 .note-name {
     font-size: 0.92rem;
     opacity: 0.95;
+    line-height: 1.45;
 }
 
 /* Stats */
@@ -564,20 +570,8 @@ body {
     background: #fff;
 }
 
-.flex-payment {
-    display: grid;
-    grid-template-columns: 1.03fr 0.97fr;
-    gap: 24px;
-    align-items: stretch;
-}
-
-.payment-text,
-.bank-card {
-    height: 100%;
-}
-
 .payment-text {
-    min-width: 0;
+    width: 100%;
     background: linear-gradient(180deg, #fbfdfb 0%, #f5faf5 100%);
     border: 1px solid #edf3ed;
     border-radius: 28px;
@@ -632,71 +626,6 @@ body {
     color: #777;
 }
 
-.bank-card {
-    background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 20px 42px rgba(0,0,0,0.06);
-    border: 1px solid #f0f0f0;
-}
-
-.bank-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 14px;
-}
-
-.bsi-logo {
-    height: 28px;
-    width: auto;
-}
-
-.meta {
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: #b5b5b5;
-    letter-spacing: 2px;
-    text-align: right;
-}
-
-.bank-body label {
-    display: block;
-    font-size: 0.82rem;
-    color: var(--muted);
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.acc-num {
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--dark);
-    margin: 4px 0 6px;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
-}
-
-.acc-name {
-    font-size: 0.95rem;
-    color: #666;
-    font-weight: 600;
-}
-
-.badge {
-    display: inline-block;
-    margin-top: 22px;
-    background: #e8f5e9;
-    color: var(--primary);
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.72rem;
-}
-
 /* Footer */
 .footer {
     text-align: center;
@@ -744,17 +673,8 @@ body {
         max-width: 420px;
     }
 
-    .flex-payment {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
     .wa-grid {
         grid-template-columns: 1fr;
-    }
-
-    .acc-num {
-        font-size: 1.8rem;
     }
 }
 
@@ -864,15 +784,6 @@ body {
     .payment-text {
         padding: 22px;
         border-radius: 22px;
-    }
-
-    .bank-card {
-        padding: 22px;
-        border-radius: 22px;
-    }
-
-    .acc-num {
-        font-size: 1.55rem;
     }
 
     .arabic {
